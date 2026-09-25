@@ -17,16 +17,6 @@ const year = new Date().getFullYear()
       <div class="grid gap-10 md:grid-cols-2">
         <!-- Brand -->
         <div class="space-y-3">
-          <div class="leading-tight">
-            <div class="text-lg font-light text-zinc-300 -mt-1">Hartville</div>
-            <div class="text-3xl font-light">Electronics Repair</div>
-          </div>
-
-          <p class="text-sm text-zinc-300 leading-6">
-            Mobile electronics repair — phones, tablets, laptops, consoles, TVs.
-            <span class="text-zinc-200">By appointment only.</span>
-          </p>
-
           <div class="pt-2">
             <a
               class="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-zinc-900 hover:opacity-90 transition"
