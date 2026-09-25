@@ -71,7 +71,6 @@ const lgSpanClass = (i: number) => {
           <h3 class="text-2xl">Service Center</h3>
         </div>
         <p><strong class="font-bold">Hartville Electronics Repair</strong> provides professional repair of
-          phones,
           smartphones, tablets, laptops, and other electronic devices of almost all brands and
           models.
         </p>
