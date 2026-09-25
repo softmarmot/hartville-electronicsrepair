@@ -74,11 +74,7 @@ const lgSpanClass = (i: number) => {
           smartphones, tablets, laptops, and other electronic devices of almost all brands and
           models.
         </p>
-        <p>We never charge money just “to take a look.” At <strong class="font-bold">Hartville Electronics Repair</strong>, diagnostics for your device
-          are completely free. Every day, we handle numerous repairs, monitor the work of our
-          technicians, and ensure that repair times for phones, laptops, tablets, and other
-          gadgets
-          stay fast and reliable.</p>
+        <p>We never charge money just to take a look. At <strong class="font-bold">Hartville Electronics Repair</strong>, diagnostics for your device are completely free.</p>
       </div>
     </section>
 
