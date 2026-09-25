@@ -12,8 +12,8 @@ import TheFooter from "@/components/TheFooter.vue";
 
       <TheFooter
         hours="Mon–Sun • 9:00 AM – 8:00 PM"
-        phone="(330) 555-1234"
-        phoneHref="tel:+13305551234"
+        phone="(330) 958-3587"
+        phoneHref="tel:+13309583587"
         serviceArea="Hartville, OH + surrounding areas"
       />
     </main>
