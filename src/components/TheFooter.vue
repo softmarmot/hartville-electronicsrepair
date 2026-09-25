@@ -2,6 +2,8 @@
 const props = defineProps<{
   phone?: string          // e.g. "(330) 555-1234"
   phoneHref?: string      // e.g. "tel:+13305551234"
+  email?: string          // e.g. "info@mydomain.com"
+  emailHref?: string      // e.g. "mailto:info@mydomain.com"
   serviceArea?: string    // e.g. "Hartville, OH + surrounding areas"
   hours?: string          // e.g. "Mon–Sun • 9:00 AM – 8:00 PM"
 }>()
@@ -50,6 +52,19 @@ const year = new Date().getFullYear()
                   :href="props.phoneHref || 'tel:+1XXXXXXXXXX'"
                 >
                   {{ props.phone || '(XXX) XXX-XXXX' }}
+                </a>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined text-yellow-400">alternate_email</span>
+              <div>
+                <div class="text-sm text-zinc-400">Email</div>
+                <a
+                  class="hover:text-white transition"
+                  :href="props.emailHref || 'mailto:info@mydomain.com'"
+                >
+                  {{ props.email || 'info@mydomain.com' }}
                 </a>
               </div>
             </div>
