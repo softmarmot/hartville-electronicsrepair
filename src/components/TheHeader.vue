@@ -16,7 +16,7 @@ const goTo = async (id: string) => {
 
 <template>
   <header
-    class="fixed top-0 left-0 w-screen z-50 px-4 bg-zinc-900 text-zinc-300 border-b border-b-zinc-700 md:flex">
+    class="fixed top-0 left-0 w-screen z-50 px-4 bg-zinc-900 text-zinc-300 border-b border-b-zinc-700 md:flex py-2 md:py-0">
     <div class="flex grid-cols-2">
       <img alt="Hartville Electronics Repair Logo" class="h-14 my-auto" src="@/assets/logo.webp">
       <div class="w-full flex justify-end">
