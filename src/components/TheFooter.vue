@@ -14,10 +14,10 @@ const year = new Date().getFullYear()
 <template>
   <footer id="footer">
     <div class="mx-auto max-w-6xl px-6 py-12">
-      <div class="grid gap-10 md:grid-cols-2">
+      <div class="grid gap-6 md:gap-10 md:grid-cols-2">
         <!-- Brand -->
-        <div class="space-y-3">
-          <div class="pt-2">
+        <div>
+          <div class="h-9 mb-4 flex items-center">
             <a
               class="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-zinc-900 hover:opacity-90 transition"
               :href="props.phoneHref || 'tel:+1XXXXXXXXXX'"
@@ -26,11 +26,30 @@ const year = new Date().getFullYear()
               Call / Text
             </a>
           </div>
+
+          <div class="space-y-4 text-zinc-300">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">schedule</span>
+              <div>
+                <div class="text-sm text-zinc-400">Hours</div>
+                <div>{{ props.hours || 'Mon–Sun • By appointment' }}</div>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">location_on</span>
+              <div>
+                <div class="text-sm text-zinc-400">Service Area</div>
+                <div>{{ props.serviceArea || 'Hartville, OH + surrounding areas' }}</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Contacts -->
         <div>
-          <h4 class="text-xl font-light mb-4">Contact</h4>
+          <div class="h-9 mb-4 flex items-center">
+            <h4 class="text-xl font-light">Contacts</h4>
+          </div>
 
           <div class="space-y-4 text-zinc-300">
             <div class="flex gap-3">
@@ -45,9 +64,8 @@ const year = new Date().getFullYear()
                 </a>
               </div>
             </div>
-
             <div class="flex gap-3">
-              <span class="material-symbols-outlined text-yellow-400">alternate_email</span>
+              <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">alternate_email</span>
               <div>
                 <div class="text-sm text-zinc-400">Email</div>
                 <a
@@ -56,22 +74,6 @@ const year = new Date().getFullYear()
                 >
                   {{ props.email || 'info@mydomain.com' }}
                 </a>
-              </div>
-            </div>
-
-            <div class="flex gap-3">
-              <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">schedule</span>
-              <div>
-                <div class="text-sm text-zinc-400">Hours</div>
-                <div>{{ props.hours || 'Mon–Sun • By appointment' }}</div>
-              </div>
-            </div>
-
-            <div class="flex gap-3">
-              <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">location_on</span>
-              <div>
-                <div class="text-sm text-zinc-400">Service Area</div>
-                <div>{{ props.serviceArea || 'Hartville, OH + surrounding areas' }}</div>
               </div>
             </div>
           </div>
