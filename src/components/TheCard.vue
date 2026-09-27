@@ -20,8 +20,10 @@ const bgStyle = computed(() => {
   <div class="w-full">
     <div
       :style="bgStyle"
-      class="card-header rounded-2xl w-full h-64 bg-cover bg-center flex flex-col justify-end p-8">
-      <h4 class="font-normal tracking-wide text-shadow-xs">{{ props.title }}</h4>
+      class="card-header relative overflow-hidden rounded-2xl w-full h-64 bg-cover bg-center flex flex-col justify-end">
+      <div v-if="props.title" class="w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 pt-12">
+        <h4 class="font-normal tracking-wide text-shadow-xs">{{ props.title }}</h4>
+      </div>
     </div>
     <div class="card-content mt-4">
       <slot></slot>
