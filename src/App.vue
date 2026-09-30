@@ -11,7 +11,7 @@ import TheFooter from "@/components/TheFooter.vue";
       <RouterView />
 
       <TheFooter
-        hours="Mon–Sun • 9:00 AM – 8:00 PM"
+        hours="Mon–Sat • 9:00 AM – 8:00 PM"
         phone="(330) 958-3587"
         phoneHref="tel:+13309583587"
         email="hartvilleelectronicsrepair@gmail.com"
