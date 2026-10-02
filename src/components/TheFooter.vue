@@ -91,7 +91,15 @@ const year = new Date().getFullYear()
         </div>
 
         <div class="text-xs text-zinc-500">
-          Built with fair prices • free diagnostics • warranty-backed repairs
+          Website designed &amp; developed by
+          <a
+            class="text-zinc-300 hover:text-yellow-400 transition"
+            href="https://softmarmot.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            SoftMarmot LLC
+          </a>
         </div>
       </div>
     </div>
