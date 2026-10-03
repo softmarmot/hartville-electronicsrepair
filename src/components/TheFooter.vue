@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import TheContactForm from './TheContactForm.vue'
+
 const props = defineProps<{
   phone?: string          // e.g. "(330) 555-1234"
   phoneHref?: string      // e.g. "tel:+13305551234"
@@ -14,19 +16,9 @@ const year = new Date().getFullYear()
 <template>
   <footer id="footer">
     <div class="mx-auto max-w-6xl px-6 py-12">
+      <h1 class="text-4xl text-center">Contacts</h1>
       <div class="grid gap-6 md:gap-10 md:grid-cols-2">
-        <!-- Brand -->
-        <div>
-          <div class="h-9 mb-4 flex items-center">
-            <a
-              class="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-zinc-900 hover:opacity-90 transition"
-              :href="props.phoneHref || 'tel:+1XXXXXXXXXX'"
-            >
-              <span class="material-symbols-outlined text-[20px]" aria-hidden="true">call</span>
-              Call / Text
-            </a>
-          </div>
-
+        <div class="mt-8 flex flex-col gap-y-4">
           <div class="space-y-4 text-zinc-300">
             <div class="flex gap-3">
               <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">schedule</span>
@@ -42,16 +34,6 @@ const year = new Date().getFullYear()
                 <div>{{ props.serviceArea || 'Hartville, OH + surrounding areas' }}</div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Contacts -->
-        <div>
-          <div class="h-9 mb-4 flex items-center">
-            <h4 class="text-xl font-light">Contacts</h4>
-          </div>
-
-          <div class="space-y-4 text-zinc-300">
             <div class="flex gap-3">
               <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">call</span>
               <div>
@@ -59,9 +41,7 @@ const year = new Date().getFullYear()
                 <a
                   class="hover:text-white transition"
                   :href="props.phoneHref || 'tel:+1XXXXXXXXXX'"
-                >
-                  {{ props.phone || '(XXX) XXX-XXXX' }}
-                </a>
+                >{{ props.phone || '(XXX) XXX-XXXX' }}</a>
               </div>
             </div>
             <div class="flex gap-3">
@@ -71,12 +51,21 @@ const year = new Date().getFullYear()
                 <a
                   class="hover:text-white transition"
                   :href="props.emailHref || 'mailto:info@mydomain.com'"
-                >
-                  {{ props.email || 'info@mydomain.com' }}
-                </a>
+                >{{ props.email || 'info@mydomain.com' }}</a>
               </div>
             </div>
           </div>
+
+          <div class="h-9 flex items-center">
+            <a
+              class="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-zinc-900 hover:opacity-90 transition"
+              :href="props.phoneHref || 'tel:+1XXXXXXXXXX'"
+            ><span class="material-symbols-outlined text-[20px]" aria-hidden="true">call</span>Call / Text</a>
+          </div>
+        </div>
+
+        <div>
+          <TheContactForm class="mt-8"/>
         </div>
       </div>
 
